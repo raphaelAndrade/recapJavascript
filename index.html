@@ -14,6 +14,7 @@
       <title>Page Title</title>
       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
       <link rel="stylesheet" type="text/css" href="style.css">
+      <script src="script.js"></script>
    </head>
    <body>
         <!--Section Header-->
@@ -50,10 +51,10 @@
                     <div class="col-md-5">
                         <h4>Learn more about us</h4>
                         <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut in facilisis ante, quis vulputate ligula. Etiam porttitor vulputate velit, vel suscipit mauris efficitur at. Donec porttitor, justo non pulvinar rhoncus, justo nisi lobortis purus, ac sagittis erat lectus quis felis. Proin quis lacus mi. Cras auctor porta sem, nec maximus ligula laoreet eu. Nullam laoreet congue nisi id auctor. Aliquam tristique volutpat augue, quis varius tellus dictum non. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nulla sit amet justo aliquam, facilisis eros non, tincidunt dolor.
+                            The pain itself is love, the main storage system. As in the easy ante, who's the Olympic nuts. Even the ferry chooses to be versatile, or takes up the ends at the end. Until the ferry, not just the couch, the Zen, the righteous, but the pure carton, and the arrows were the beds of any cat. Who is my lake? Cras auctor porta sem, nec Maximus ligula laoreet eu. No bills for the author except that. Maybe the sad weekend was not The entrance to the entrance of the orcs in front of the very first layer of mourning and vengeful care lay down the bed; There is no love for some just, easy eros not, pain
                         </p>
                         <p>
-                            Aenean faucibus auctor felis, nec rutrum odio dictum fermentum. Nulla efficitur fringilla nisi, blandit mattis augue finibus et. Etiam eget felis ac justo facilisis varius quis ut odio. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean aliquam mi metus, in euismod dui vehicula efficitur. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla condimentum erat pretium, vestibulum odio ut, dapibus augue.
+                            Aeneas is the author of the jaws of the cat, and not the makeup of the hate was said to be fermented. Nothing is accomplished except for our customers, and a lot of flattering propaganda ends. It also needs a cat and just an easy coach who hates it. The pain itself is love, the main storage system. Aeneas takes some of my fears, he becomes in the memories The pain itself is love, the main storage system. There was no price for the sauce, so that the entrance was hate, protein propaganda.
                         </p>
                     </div>
                 </div>
@@ -67,7 +68,15 @@
                         <h1>Users</h1>
                         <div class="card">
                             <div class="card-body">
-                                
+                                <label >Search By:</label>
+                                <input type="text"  name="name" id="name" placeholder="Name"/>
+                                <input type="text"  name="username" id="username" placeholder="Username"/>
+                                <input type="number"  name="userID"d id="userID" placeholder="User ID"/>
+                                <button class="submit btn btn-primary" id="searchbutton">Search</button>
+                                <br>
+                                <span id="displayResult"><!--The content will be create by Javascritp --></span>
+                                <!-- <button class="submit btn btn-primary" id="deleteUser">Delete User</button>
+                                <button class="submit btn btn-primary" id="editUser">Edit User</button> -->
                             </div>
              
                     </div>
@@ -98,4 +107,11 @@
             </div>
         </section>
    </body>
+   <script>
+        /*add event click to search submit button function*/    
+        document.getElementById("searchbutton").addEventListener("click",(element) => {
+        element.preventDefault();
+            searchBtn();
+        })
+   </script>
 </html>
