@@ -46,10 +46,16 @@
           <div class="col-md-5">
             <h4>Learn more about us</h4>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut in facilisis ante, quis vulputate ligula. Etiam porttitor vulputate velit, vel suscipit mauris efficitur at. Donec porttitor, justo non pulvinar rhoncus, justo nisi lobortis purus, ac sagittis erat lectus quis felis. Proin quis lacus mi. Cras auctor porta sem, nec maximus ligula laoreet eu. Nullam laoreet congue nisi id auctor. Aliquam tristique volutpat augue, quis varius tellus dictum non. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nulla sit amet justo aliquam, facilisis eros non, tincidunt dolor.
-            </p>
-            <p>
-              Aenean faucibus auctor felis, nec rutrum odio dictum fermentum. Nulla efficitur fringilla nisi, blandit mattis augue finibus et. Etiam eget felis ac justo facilisis varius quis ut odio. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean aliquam mi metus, in euismod dui vehicula efficitur. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla condimentum erat pretium, vestibulum odio ut, dapibus augue.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut in 
+              facilisis ante, quis vulputate ligula. Etiam porttitor vulputate 
+              velit, vel suscipit mauris efficitur at. Donec porttitor, justo 
+              non pulvinar rhoncus, justo nisi lobortis purus, ac sagittis 
+              erat lectus quis felis. Proin quis lacus mi. Cras auctor porta sem
+              , nec maximus ligula laoreet eu. Nullam laoreet congue nisi id 
+              auctor. Aliquam tristique volutpat augue, quis varius tellus 
+              dictum non. Vestibulum ante ipsum primis in faucibus orci luctus 
+              et ultrices posuere cubilia curae; Nulla sit amet justo aliquam, 
+              facilisis eros non, tincidunt dolor.
             </p>
           </div>
         </div>
@@ -60,79 +66,26 @@
     <section class="users">
       <div class="container">
         <div class="row">
-          <div class="col-md-12">
+          <div class="col-md-12" id="user-list">
             <h1>Users</h1>
 
-            <div class="input-group mb-3">
-              <input
-                type="text"
-                class="form-control"
-                placeholder="filter users"
-                aria-label="Recipient's username"
-                aria-describedby="basic-addon2">
-              <div class="input-group-append">
-                <button class="btn btn-outline-success" type="button">Filter</button>
-              </div>
+            <!-- user -->
+            <div>
+              <input class="filter-input"type="text">
+              <button type="button" class="btn btn-primary">filter</button>
             </div>
 
-            <table class="table">
-              <thead>
-                <tr>
-                  <th scope="col"><h3>User n</h3></th>
-                  <td>
-                    <button class="btn btn-outline-warning">Edit</button>
-                    <button class="btn btn-outline-danger">Delete</button>
-                  </td>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <th scope="row">id</th>
-                  <td>0</td>
-                </tr>
-                <tr>
-                  <th scope="row">name</th>
-                  <td>Ervin Howell</td>
-                </tr>
-                <tr>
-                  <th scope="row">username</th>
-                  <td>Antonette</td>
-                </tr>
-                <tr>
-                  <th scope="row">email</th>
-                  <td>Shanna@melissa.tv</td>
-                </tr>
-                <tr>
-                  <th scope="row">name</th>
-                  <td>Ervin Howell</td>
-                </tr>
-                <tr>
-                  <th scope="row">username</th>
-                  <td>Antonette</td>
-                </tr>
-                
-                <tr>
-                  <th scope="row">address</th>
-                  <td>
-                    <table class="table">
-                      <tr>
-                        <td>Victor Plains</td>
-                      </tr>
-                      <tr>
-                        <td>Suite 879</td>
-                      </tr>
-                      <tr>
-                        <td>Wisokyburgh</td>
-                      </tr>
-                      <tr>
-                        <td>123-4567</td>
-                      </tr>
-                    </table>
-                  </td>
-                </tr>
-
-              </tbody>
-            </table>
+            <div class="card-body" id="user-wrapper" style="display: none">
+              <div class="card">
+                <ul class="user">
+                  <li id="name-of-user"></li>
+                  <li id="username"></li>
+                  <li id="user-email"></li>
+                  <button type="button" class="btn btn-warning">Edit</button>
+                  <button type="button" class="btn btn-danger">delete</button>
+                </ul>
+              </div>
+            </div>
 
           </div>
         </div>
@@ -140,4 +93,5 @@
     </section>
 
   </body>
+  <script src="script.js"></script>
 </html>
