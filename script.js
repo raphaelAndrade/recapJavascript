@@ -16,8 +16,8 @@ let resultA;
                     //Append the result in the html
                     for(let i=0; i<chosenUser.length;i++){
                         let displayInfo = document.createElement('span'); //create the element
-                        displayInfo.innerHTML = `<br><div class="card">ID: ${chosenUser[i].id}<div>Name: ${chosenUser[i].name}<div>Username: ${chosenUser[i].username}</div><button class="submit btn btn-primary" id="deleteUser">Delete User</button>
-                                <button class="submit btn btn-primary" id="editUser">Edit User</button><br>`;
+                        displayInfo.innerHTML = `<br><div class="card">ID: ${chosenUser[i].id}<div>Name: ${chosenUser[i].name}<div>Username: ${chosenUser[i].username}</div><button class="submit btn btn-primary" onClick="deleteButton(this.value)" value="${i}" id="${i}deleteUser">Delete User</button>
+                                <button class="submit btn btn-primary"  value="${i}" id="${i}editUser">Edit User</button><br>`;
                         document.getElementById("displayResult").appendChild(displayInfo);
                     }
 
@@ -25,6 +25,16 @@ let resultA;
                         console.log(error)
                     })
                 })
+        }
+        const deleteButton=(x)=>{
+            chosenUser.splice(x, 1);
+            document.getElementById("displayResult").innerHTML = ""; // Clean the results
+            for(let i=0; i<chosenUser.length;i++){
+                    let displayInfo = document.createElement('span'); //create the element
+                    displayInfo.innerHTML = `<br><div class="card">ID: ${chosenUser[i].id}<div>Name: ${chosenUser[i].name}<div>Username: ${chosenUser[i].username}</div><button class="submit btn btn-primary" onClick="deleteButton(this.value)" value="${i}" id="${i}deleteUser">Delete User</button>
+                                    <button class="submit btn btn-primary" value="${i}" id="${i}editUser">Edit User</button><br>`;
+                    document.getElementById("displayResult").appendChild(displayInfo);
+            }
         }
 
         /* Function to search by ID number*/
