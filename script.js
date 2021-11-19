@@ -51,10 +51,4 @@ const filterUsers = () => {
   );
 };
 
-const deleteUser = (id) => {
-  let newUsers = listUsers.filter((user) => {
-    return user.id !== id;
-  });
-};
-
 fetchUser();
