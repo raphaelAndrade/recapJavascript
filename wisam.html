@@ -28,7 +28,7 @@
                         <nav class="menu">
                             <a href="#">Home</a>
                             <a href="#">About us</a>
-                            <a href="#">Gallery</a>
+                            <a href="newUser.html">New User</a>
                             <a href="#">Albums</a>
                             <a href="#">Contact</a>
                         </nav>
@@ -73,7 +73,9 @@
                                 <input type="text"  name="username" id="username" placeholder="Username"/>
                                 <input type="number"  name="userID"d id="userID" placeholder="User ID"/>
                                 <button class="submit btn btn-primary" id="searchbutton">Search</button>
+                                <button class="submit btn btn-primary" id="addUserButton">Create User</button>
                                 <br>
+                                <span id="displayNewUser"><!--The content will be create by Javascritp --></span>
                                 <span id="displayResult"><!--The content will be create by Javascritp --></span>
                             </div>
              
@@ -87,6 +89,12 @@
         document.getElementById("searchbutton").addEventListener("click",(element) => {
         element.preventDefault();
             searchBtn();
+        })
+        fetchUser();
+
+        document.getElementById("addUserButton").addEventListener("click",(element) => {
+            element.preventDefault();
+            newUserButton();
         })
    </script>
 </html>
