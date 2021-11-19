@@ -15,9 +15,11 @@ const fetchUser = () => {
 
     response.json().then((data) => {
       listUsers = data;
+      localStorage.setItem("users", JSON.stringify(data));
+      let userList = JSON.parse(localStorage.getItem("newUsers"));
       let list = document.getElementById("listUsers");
       let item = null;
-      listUsers.map((user) => {
+      userList.map((user) => {
         item = document.createElement("li");
         item.innerHTML = `<div class="card"><ul> <li>name: ${user.name}</li><li>email: ${user.email}</li><li>username: ${user.username}</li><button type="button" class="btn btn-info">Edit</button><button type="button" value=${user.id} id=${user.id} class="btn btn-warning">delete</button></ul></div>`;
         list.append(item);
