@@ -3,6 +3,9 @@
 - implement event handler for edit button
 ---------------------------------------+--------------------------------------*/
 
+/*-------------------------------------+----------------------------------------
+                                event handlers
+---------------------------------------+--------------------------------------*/
 //-------------------------------------+----------------------- invoked on click
 const handleDelete = (elm) => {
   const toDelete = document.querySelector(`#uid${elm.id.slice(3)}`);
@@ -11,7 +14,26 @@ const handleDelete = (elm) => {
 }
 //-------------------------------------+---------------------- /invoked on click
 
-//-------------------------------------+------------------------ invoked by main
+//-------------------------------------+----------------------- invoked on input
+const e_filter = document.getElementById('filter-by');
+const e_filterError = document.querySelector('#filter-by + span.error');
+
+e_filter.addEventListener('input', (event) => {
+  const userInput = e_filter.value;
+  if (userInput < 1 || 10 < userInput) {
+    e_filterError.textContent = 'Please enter a number between 1 and 10';
+    e_filterError.className = 'error active';
+    // TODO: disable filter button
+  } else {
+    e_filterError.textContent = '';
+  }
+});
+//-------------------------------------+---------------------- /invoked on input
+//-------------------------------------+----------------------------------------
+
+/*-------------------------------------+----------------------------------------
+                                invoked by main
+---------------------------------------+--------------------------------------*/
 const getUsers = async (url) => {
   // TODO: implement more rigorous error handling
 
@@ -51,6 +73,7 @@ const handleFilter = (e_users) => {
    * implement input validation
    * https://developer.mozilla.org/en-US/docs/Learn/Forms/Form_validation
    */
+
   const e_fltrBtn = document.querySelector('.filter-btn');
 
   e_fltrBtn.addEventListener('click', (evt) => {
@@ -64,7 +87,7 @@ const handleFilter = (e_users) => {
     }
   })
 }
-//-------------------------------------+----------------------- /invoked by main
+//-------------------------------------+----------------------------------------
 
 const main = async () => {
   const dataEndPoint = 'https://jsonplaceholder.typicode.com/users';
