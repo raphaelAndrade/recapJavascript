@@ -73,17 +73,17 @@
             <!-- user -->
             <div>
               <input class="filter-input" type="number" min="1" max="10" id="filter-by">
-              <button type="button" class="btn btn-primary" id="filter-btn">filter</button>
+              <button type="button" class="btn btn-primary filter-btn">filter</button>
             </div>
 
             <div class="card-body user-wrapper" id="" style="display: none">
               <div class="card">
                 <ul class="user">
-                  <li id="name-of-user"></li>
-                  <li id="username"></li>
-                  <li id="user-email"></li>
-                  <button type="button" class="btn btn-warning">Edit</button>
-                  <button type="button" class="btn btn-danger">delete</button>
+                  <li class="name-of-user"></li>
+                  <li class="username"></li>
+                  <li class="user-email"></li>
+                  <button type="button" class="btn btn-warning edit-button" id="">Edit</button>
+                  <button type="button" class="btn btn-danger delete-button" id="" onclick="handleDelete(this)">delete</button>
                 </ul>
               </div>
             </div>
