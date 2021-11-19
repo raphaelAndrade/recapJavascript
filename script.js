@@ -47,12 +47,12 @@ const filterUsers = () => {
     })
 }
 
+//Create a new User function
 
-
-const deleteUser = (id) => {
-    let newUsers = listUsers.filter(user => {
-        return user.id !== id;
-    })
+const createNewUser = (obj) => {
+    let name = document.getElementById("name").value;
+    let userName = document.getElementById("userName").value;
+    let email = document.getElementById("email").value;
 }
 
 fetchUser()
