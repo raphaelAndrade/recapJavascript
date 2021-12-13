@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>recap lab</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    >
+    <link rel="stylesheet" type="text/css" href="styles.acekay.css">
+  </head>
+
+  <body>
+    <header>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3">
+            <div class="logo">logo</div>
+          </div>
+          <div class="col-md-9">
+            <nav class="menu">
+              <a href="#">Home</a>
+              <a href="#">About us</a>
+              <a href="#">Gallery</a>
+              <a href="#">Albums</a>
+              <a href="#">Contact</a>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- About us -->
+    <section class="aboutUs">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h1>About Us</h1>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-7">
+            <div class="imageAboutus"></div>
+          </div>
+          <div class="col-md-5">
+            <h4>Learn more about us</h4>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut in 
+              facilisis ante, quis vulputate ligula. Etiam porttitor vulputate 
+              velit, vel suscipit mauris efficitur at. Donec porttitor, justo 
+              non pulvinar rhoncus, justo nisi lobortis purus, ac sagittis 
+              erat lectus quis felis. Proin quis lacus mi. Cras auctor porta sem
+              , nec maximus ligula laoreet eu. Nullam laoreet congue nisi id 
+              auctor. Aliquam tristique volutpat augue, quis varius tellus 
+              dictum non. Vestibulum ante ipsum primis in faucibus orci luctus 
+              et ultrices posuere cubilia curae; Nulla sit amet justo aliquam, 
+              facilisis eros non, tincidunt dolor.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Users-->
+    <section class="users">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12" id="user-list">
+            <h1>Users</h1>
+
+            <!-- user -->
+            <div>
+              <input class="filter-input" type="number" min="1" max="10" id="filter-by">
+              <span class="error"></span>
+              <button type="button" class="btn btn-primary filter-btn">filter</button>
+            </div>
+
+            <div class="card-body user-wrapper" id="" style="display: none">
+              <div class="card">
+                <ul class="user">
+                  <li class="name-of-user"></li>
+                  <li class="username"></li>
+                  <li class="user-email"></li>
+                  <button type="button" class="btn btn-warning edit-button" id="">Edit</button>
+                  <button type="button" class="btn btn-danger delete-button" id="" onclick="handleDelete(this)">delete</button>
+                </ul>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </body>
+  <script src="index.acekay.js"></script>
+</html>
